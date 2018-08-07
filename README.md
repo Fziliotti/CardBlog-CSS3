@@ -10,5 +10,5 @@
 - Uso de REM - ainda falta implementar a responsividade da tag <html>
 <hr>
 Link do projeto: https://fziliotti.github.io/CardBlog-Minimalista/ <br>
-Link do CodePen: https://codepen.io/fziliotti/pen/MBqGKj
+Link inicial do projeto no CodePen: https://codepen.io/fziliotti/pen/MBqGKj
 
