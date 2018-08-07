@@ -1,5 +1,13 @@
 # CardBlog-Minimalista
-## Esse é um projeto inspirado pela necessidade de treinar a responsividade utilizando GridLayout, além de poder servir como tela inicial de blogs em geral, como por exemplo blogs desenvolvidos com Jekyll.
-link do projeto: https://fziliotti.github.io/CardBlog-Minimalista/ <br>
-link do projeto no CodePen: https://codepen.io/fziliotti/pen/MBqGKj
+### Esse é um projeto inspirado pela necessidade de treinar a responsividade utilizando GridLayout, além de poder servir como tela inicial de blogs em geral, como por exemplo blogs desenvolvidos com Jekyll.
+<hr>
+#### O que foi estudado:
+- Paleta de cores FLAT
+- Uso de ícones
+- Uso de GridLayout com media queries
+- Uso de variáveis no próprio css
+- Uso de REM - ainda falta implementar a responsividade da tag <html>
+<hr>
+Link do projeto: https://fziliotti.github.io/CardBlog-Minimalista/ <br>
+Link do CodePen: https://codepen.io/fziliotti/pen/MBqGKj
 
