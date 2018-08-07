@@ -2,6 +2,7 @@
 ### Esse é um projeto inspirado pela necessidade de treinar a responsividade utilizando GridLayout, além de poder servir como tela inicial de blogs em geral, como por exemplo blogs desenvolvidos com Jekyll.
 <hr>
 <h4>O que foi estudado: </h4>
+
 - Paleta de cores FLAT
 - Uso de ícones
 - Uso de GridLayout com media queries
