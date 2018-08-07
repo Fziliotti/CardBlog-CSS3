@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title> Grid Layout	</title>
+	<meta name="description" content="CardBlog Minimalista">
+	<meta name="author" content="Fabrício Fernandes Ziliotti">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<meta name="viewport" content="width = device-width, initial-scale=1, shrink-to-fit=no"> 
+</head>
+
+
+
+<!-- Seria melhor colocar o conteudo da tag <style> em um arquivo separado, mas para uso didático, optei por deixar aqui mesmo! -->
+<style>	
+
+/* VARIAVEIS */
+:root{
+	--color-primary: #2980b9;
+	--color-secondary: #95a5a6;
+	--color-terciary:  #27ae60;
+	--color-white:  white;
+	--font-h1: 3.2rem;
+	--font-h2: 2.4rem;
+	--font-h3: 1.8rem;
+}
+
+
+/* RESET */
+html{
+	font-size: 62.5%; /* 10px */
+	box-sizing: border-box;
+	line-height: 1.6;  /*Materialize*/
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit; 
+}
+
+
+
+/* UTILS */
+.colorPrimary{background-color: var(--color-primary);}
+.colorSecondary{background-color: var(--color-secondary);}
+.colorTerciary{background-color: var(--color-terciary);}
+
+
+.txtWhite{color:var(--color-white);}
+.h1{font-size:var(--font-h1);}
+.h2{font-size:var(--font-h2);}
+.h3{font-size:var(--font-h3);}
+
+
+
+
+
+/*
+CABEÇALHO DO SITE 
+*/
+.header{
+	padding-bottom: 3rem;
+	text-align: center;
+}
+
+.header .h1{
+	padding: 3rem;
+	font-family: 'Pacifico';
+	font-weight: 200;
+}
+
+article{
+	text-align: center;
+	border: .1rem ;
+	padding: 2rem;
+	border-radius: .4rem;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3); /*Materialize*/
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+}
+
+article:hover{
+	transform: scale(1.02);
+}
+
+article>p {
+	margin-top: 4rem;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	color:  var(--color-white);
+}
+
+article .faixa{
+	position: absolute;
+	top: 5;
+	left: 5;
+	
+}
+
+article .faixa i{
+	font-size: 3em;
+	color: white;
+}
+
+
+
+
+/* 
+FOOTER
+ */
+.footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem;
+	margin-top: 3rem;
+	height: 180px;
+}
+
+.footer>h2{
+	vertical-align: middle;
+
+}
+
+.txt-link{
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+}
+
+
+/*
+	Responsividade do GridLayout
+*/
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 480px) { 
+	.container{
+		width: 100%;
+     	margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr; /*fractional relative*/
+		grid-template-rows:auto auto auto;
+		grid-gap: 1.5rem;
+	}
+}
+ 
+/* Telefones em paisagem a tablet em retrato */
+@media (min-width: 481px) and (max-width: 767px) {
+     .container{
+     	width: 80%;
+     	margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2,1fr); /*fractional relative*/
+		grid-template-rows:auto auto auto;
+		grid-gap: 1.5rem;
+	}
+}
+ 
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+      .container{
+      	width: 80%;
+     	margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(3,1fr); /*fractional relative*/
+		grid-template-rows:auto auto auto;
+		grid-gap: 1.5rem;
+	}
+}
+ 
+/* Desktop grande */
+@media (min-width: 980px) {
+     .container{
+     	width: 80%;
+     	margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr); /*fractional relative*/
+		grid-template-rows:auto auto auto;
+		grid-gap: 1.5rem;
+	}
+}
+
+
+
+
+</style>
+<body>
+
+	<header class="	header">	
+		<h1 class="h1 colorPrimary txtWhite ">CardBlog Minimalista - por Fziliotti</h1>
+	</header>
+
+
+	<section class="container">	
+
+		<article class="item colorPrimary">	
+			<div class="faixa"><i class="fas fa-asterisk"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, repellendus!</p>
+		</article>
+
+		<article class="item colorSecondary">
+			<div class="faixa"><i class="fas fa-asterisk"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nobis cupiditate at voluptas voluptate iure ea consectetur, delectus libero! Praesentium!</p>
+		</article>
+		<article class="item colorTerciary">
+			<div class="faixa"><i class="fas fa-stroopwafel"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus corrupti obcaecati quae dolorem in incidunt, numquam maxime porro ea ab optio. Deleniti repellat, voluptate inventore unde explicabo sunt, error assumenda quisquam suscipit tenetur recusandae!</p>
+		</article>
+		<article class="item colorSecondary">
+			<div class="faixa"><i class="fas fa-user-graduate"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ducimus neque exercitationem delectus pariatur nulla tempore, explicabo nostrum laborum, at in expedita accusamus, perferendis, dicta minima quas aut. Ullam, ratione at fugiat.</p>
+
+		</article>
+		<article class="item colorPrimary">
+			<div class="faixa"><i class="fas fa-stroopwafel"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui libero, dolorum corporis harum repudiandae iste consequatur architecto, perferendis unde nobis et soluta omnis, rerum quasi! Itaque sed quidem beatae sunt assumenda laudantium ipsa, dolorum consectetur, nesciunt a eaque repudiandae ullam.</p>
+
+		</article>
+		<article class="item colorTerciary">
+			<div class="faixa"><i class="fas fa-desktop"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi dicta impedit, corporis ullam culpa maiores qui eius. Distinctio blanditiis dolore iusto, quo quaerat.</p>
+
+		</article>
+		<article class="item colorPrimary">
+			<div class="faixa"><i class="fas fa-stroopwafel"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui libero, dolorum corporis harum repudiandae iste consequatur architecto, perferendis unde nobis et soluta omnis, rerum quasi! Itaque sed quidem beatae sunt assumenda laudantium ipsa, dolorum consectetur, nesciunt a eaque repudiandae ullam.</p>
+
+		</article>
+		<article class="item colorSecondary">
+			<div class="faixa"><i class="fas fa-stroopwafel"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus corrupti obcaecati quae dolorem in incidunt, numquam maxime porro ea ab optio. Deleniti repellat, voluptate inventore unde explicabo sunt, error assumenda quisquam suscipit tenetur recusandae!</p>
+
+		</article>
+		<article class="item colorTerciary">
+			<div class="faixa"><i class="fas fa-desktop"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, repellendus!</p>
+
+		</article>
+		<article class="item colorSecondary">
+			<div class="faixa"><i class="fas fa-user-graduate"></i></div>
+			<p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus corrupti obcaecati quae dolorem in incidunt, numquam maxime porro ea ab optio. Deleniti repellat, voluptate inventore unde explicabo sunt, error assumenda quisquam suscipit tenetur recusandae!</p>
+		</article>
+
+	</section>
+
+
+	<footer class="footer colorPrimary txtWhite">
+		<h1 class="h2">Desenvolvido com HTML5 e CSS3 por <a class="txt-link" target="_BLANK" href="https://github.com/Fziliotti"><span class="rotate">Fziliotti</span></a></h1>
+	</footer>
+
+</body>
+</html>
