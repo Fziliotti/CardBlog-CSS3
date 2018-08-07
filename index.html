@@ -9,191 +9,28 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<meta name="viewport" content="width = device-width, initial-scale=1, shrink-to-fit=no"> 
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
-
-
-<!-- Seria melhor colocar o conteudo da tag <style> em um arquivo separado, mas para uso didático, optei por deixar aqui mesmo! -->
-<style>	
-
-/* VARIAVEIS */
-:root{
-	--color-primary: #2980b9;
-	--color-secondary: #95a5a6;
-	--color-terciary:  #27ae60;
-	--color-white:  white;
-	--font-h1: 3.2rem;
-	--font-h2: 2.4rem;
-	--font-h3: 1.8rem;
-}
-
-
-/* RESET */
-html{
-	font-size: 62.5%; /* 10px */
-	box-sizing: border-box;
-	line-height: 1.6;  /*Materialize*/
-}
-
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit; 
-}
-
-
-
-/* UTILS */
-.colorPrimary{background-color: var(--color-primary);}
-.colorSecondary{background-color: var(--color-secondary);}
-.colorTerciary{background-color: var(--color-terciary);}
-
-
-.txtWhite{color:var(--color-white);}
-.h1{font-size:var(--font-h1);}
-.h2{font-size:var(--font-h2);}
-.h3{font-size:var(--font-h3);}
-
-
-
-
-
-/*
-CABEÇALHO DO SITE 
-*/
-.header{
-	padding-bottom: 3rem;
-	text-align: center;
-}
-
-.header .h1{
-	padding: 3rem;
-	font-family: 'Pacifico';
-	font-weight: 200;
-}
-
-article{
-	text-align: center;
-	border: .1rem ;
-	padding: 2rem;
-	border-radius: .4rem;
-	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3); /*Materialize*/
-	transition: all .2s ease-in-out;
-	cursor: pointer;
-}
-
-article:hover{
-	transform: scale(1.02);
-}
-
-article>p {
-	margin-top: 4rem;
-	font-family: 'Roboto', sans-serif;
-	text-align: left;
-	color:  var(--color-white);
-}
-
-article .faixa{
-	position: absolute;
-	top: 5;
-	left: 5;
-	
-}
-
-article .faixa i{
-	font-size: 3em;
-	color: white;
-}
-
-
-
-
-/* 
-FOOTER
- */
-.footer{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 3rem;
-	margin-top: 3rem;
-	height: 180px;
-}
-
-.footer>h2{
-	vertical-align: middle;
-
-}
-
-.txt-link{
-	text-decoration: none;
-	transition: all .3s ease-in-out;
-}
-
-
-/*
-	Responsividade do GridLayout
-*/
-
-/* Telefones em paisagem e abaixo */
-@media (max-width: 480px) { 
-	.container{
-		width: 100%;
-     	margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1fr; /*fractional relative*/
-		grid-template-rows:auto auto auto;
-		grid-gap: 1.5rem;
-	}
-}
- 
-/* Telefones em paisagem a tablet em retrato */
-@media (min-width: 481px) and (max-width: 767px) {
-     .container{
-     	width: 80%;
-     	margin: 0 auto;
-		display: grid;
-		grid-template-columns: repeat(2,1fr); /*fractional relative*/
-		grid-template-rows:auto auto auto;
-		grid-gap: 1.5rem;
-	}
-}
- 
-/* Tablet em retrato a paisagem e desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-      .container{
-      	width: 80%;
-     	margin: 0 auto;
-		display: grid;
-		grid-template-columns: repeat(3,1fr); /*fractional relative*/
-		grid-template-rows:auto auto auto;
-		grid-gap: 1.5rem;
-	}
-}
- 
-/* Desktop grande */
-@media (min-width: 980px) {
-     .container{
-     	width: 80%;
-     	margin: 0 auto;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr); /*fractional relative*/
-		grid-template-rows:auto auto auto;
-		grid-gap: 1.5rem;
-	}
-}
-
-
-
-
-</style>
 <body>
+
+
 
 	<header class="	header">	
 		<h1 class="h1 colorPrimary txtWhite ">CardBlog Minimalista - por Fziliotti</h1>
+
+		
 	</header>
+
+	<nav class="subheader" >
+		<ul>
+			<li><a class="h3" href="#">Home</a></li>
+			<li><a class="h3" href="#">Sobre</a></li>
+			<li><a class="h3" href="#">Produtos</a></li>
+			<li><a class="h3"href="#">Contato</a></li>
+		</ul>
+	</nav>
+
 
 
 	<section class="container">	
@@ -253,5 +90,73 @@ FOOTER
 		<h1 class="h2">Desenvolvido com HTML5 e CSS3 por <a class="txt-link" target="_BLANK" href="https://github.com/Fziliotti"><span class="rotate">Fziliotti</span></a></h1>
 	</footer>
 
+
+
+	<div class="theme txtWhite">
+		<h1>TEMAS</h1>
+		<button class="btn colorSecondary txtWhite" value="dark">DARK</button>
+		<button class="btn colorSecondary txtWhite" value="calm">CALM</button>
+		<button class="btn colorSecondary txtWhite" value="light">LIGHT</button>
+	</div>
+
+	<div class="acessibility txtWhite ">
+		<h1>ACESSIBILIDADE</h1>
+		<button class="btn colorSecondary txtWhite" value="bemGrande">MUITO GRANDE</button>
+		<button class="btn colorSecondary txtWhite" value="Grande">GRANDE</button>
+		<button class="btn colorSecondary txtWhite" value="Normal">NORMAL</button>
+	</div>
+
+
+	<!-- SCRIPT DOS TEMAS -->
+	<script>
+
+		const root = document.documentElement 
+		const themeBtns = document.querySelectorAll('.theme > button')
+
+		themeBtns.forEach((btn) => {
+			btn.addEventListener('click', handleThemeUpdate)
+		})
+
+		function handleThemeUpdate(e) {
+			switch(e.target.value) {
+				case 'dark': 
+				root.style.setProperty('--bg', 'black')
+				root.style.setProperty('--bg-text', 'white')
+				break
+				case 'calm': 
+				root.style.setProperty('--bg', '#B3E5FC')
+				root.style.setProperty('--bg-text', '#37474F')
+				break
+				case 'light':
+				root.style.setProperty('--bg', 'white')
+				root.style.setProperty('--bg-text', 'black')
+				break
+			}
+		}
+	</script>
+	<!-- SCRIPT DA ACESSIBILIDADE -->
+	<script>
+
+		const root2 = document.documentElement 
+		const acessibilityBtns = document.querySelectorAll('.acessibility > button')
+
+		acessibilityBtns.forEach((btn) => {
+			btn.addEventListener('click', handleAcessibilityUpdate)
+		})
+
+		function handleAcessibilityUpdate(e) {
+			switch(e.target.value) {
+				case 'bemGrande': 
+				root2.style.setProperty('--def-font-size', '15px')
+				break
+				case 'Grande': 
+				root2.style.setProperty('--def-font-size', '13px')
+				break
+				case 'Normal':
+				root2.style.setProperty('--def-font-size', '10px')
+				break
+			}
+		}
+	</script>
 </body>
 </html>
