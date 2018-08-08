@@ -112,11 +112,18 @@ nav ul{
 	list-style: none;
 	padding: 0;
 	display: flex;
+	width: 50%;
+	margin: 0 auto;
 }
 
 nav ul li {
 	flex:  1 1 0;
+	border-right:  .01rem solid white;
 }
+nav ul li:first-child {
+	border-left:  .01rem solid white;
+}
+
 nav a{
 	text-decoration: none;
 	text-align: center;
@@ -173,6 +180,10 @@ FOOTER
 	.acessibility,.theme{
 		display: none;
 	}
+
+	nav ul{
+		width: 100%;
+	}
 }
  
 /* Telefones em paisagem a tablet em retrato */
@@ -187,6 +198,9 @@ FOOTER
 	}
 	.acessibility,.theme{
 		display: none;
+	}
+	nav ul{
+		width: 100%;
 	}
 }
  
