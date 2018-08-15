@@ -38,6 +38,7 @@ html{
 body{
 	background-color: var(--bg);
 	color: var(--bg-text);
+	transition: all 1s;
 }
 
 /* UTILS */
